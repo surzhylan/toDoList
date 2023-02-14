@@ -6,7 +6,6 @@ import {v4 as uuidv4} from 'uuid';
 
 const TodoList = () => {
     const savedTasks = localStorage.getItem('tasks')
-    console.log(JSON.parse(savedTasks))
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
@@ -16,6 +15,7 @@ const TodoList = () => {
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks])
+
     const addTask = (title) => {
         if (title) {
             const newTask = {
@@ -46,7 +46,6 @@ const TodoList = () => {
         <div className={styles.appWrapper}>
             <h5 className={styles.header}>List: </h5>
             <AddTaskForm addTask={addTask}/>
-            {/*Search?*/}
             {tasks.map((task) => {
                 return (
                     <div key={task.id}>

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './AddTaskForm.module.css'
 
 const AddTaskForm = ({addTask}) => {
     const [titleInput, setTitleInput] = useState('')
@@ -22,16 +23,14 @@ const AddTaskForm = ({addTask}) => {
     }
 
     return (
-        <div className="add-task-section">
-            <form className="add-task-content" onSubmit={handleSubmit}>
-                <input className="input-title"
-                       type="text"
-                       value={titleInput}
-                       onChange={handleTitleChange}
-                       onKeyDown={handleKeyDown}
-                       placeholder="Add new task"/>
-            </form>
-        </div>
+        <form className={styles.container} onSubmit={handleSubmit}>
+            <input className="input-title"
+                   type="text"
+                   value={titleInput}
+                   onChange={handleTitleChange}
+                   onKeyDown={handleKeyDown}
+                   placeholder="Add new task"/>
+        </form>
     )
 }
 

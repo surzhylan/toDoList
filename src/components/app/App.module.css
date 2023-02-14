@@ -8,10 +8,18 @@
 body{
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+    align-items: stretch;
 }
 
 .wrapper{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border: gray 1px solid;
+}
+
+.lists{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }

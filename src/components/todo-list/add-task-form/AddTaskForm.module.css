@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.container input{
+    flex-grow: 1;
+    font-size: large;
+    padding: 0.8rem 1rem;
+    border: gray 1px solid;
+    border-radius: 3px;
+}

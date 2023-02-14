@@ -1,6 +1,7 @@
 import ToDoListItem from "../todo-item/ToDoListItem";
 import {useState} from "react";
-import AddTaskForm from "../AddTaskForm";
+import AddTaskForm from "./add-task-form/AddTaskForm";
+import styles from "./TodoList.module.css"
 
 const TodoList = () => {
     const [tasks, setTask] = useState([])
@@ -24,7 +25,8 @@ const TodoList = () => {
     }
 
     return (
-        <div className="tasks-section">
+        <div className={styles.wrapper}>
+            <h5 className={styles.header}>List: </h5>
             <AddTaskForm addTask={addTask}/>
             {/*Search?*/}
             {tasks.map((task) => {

@@ -1,0 +1,11 @@
+.wrapper {
+    border: gray 1px solid;
+    margin: 2rem;
+    display: flex;
+    flex: 1 0;
+    flex-wrap: wrap;
+}
+
+.header {
+    font-size: x-large;
+}

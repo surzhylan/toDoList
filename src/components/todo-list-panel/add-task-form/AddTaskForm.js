@@ -2,10 +2,7 @@ import {useState} from "react";
 import styles from './AddTaskForm.module.css'
 
 const AddTaskForm = ({addTask}) => {
-    const [titleInput, setTitleInput] = useState('')
-    const handleTitleChange = (e) => {
-        setTitleInput(e.currentTarget.value)
-    }
+    const [titleInput, setTitleInput] = useState("")
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
@@ -13,7 +10,6 @@ const AddTaskForm = ({addTask}) => {
         }
     }
     const handleSubmit = (e) => {
-        e.preventDefault()
         addTask(titleInput)
         resetUserInput()
     }
@@ -27,7 +23,7 @@ const AddTaskForm = ({addTask}) => {
             <input className="input-title"
                    type="text"
                    value={titleInput}
-                   onChange={handleTitleChange}
+                   onChange={(e) => setTitleInput(e.target.value)}
                    onKeyDown={handleKeyDown}
                    placeholder="Add new task"/>
         </form>

@@ -1,19 +1,30 @@
 import ToDoListItem from "./todo-item/ToDoListItem";
-import {useState} from "react";
-import AddTaskForm from "../add-task-form/AddTaskForm";
+import {useEffect, useState} from "react";
+import AddTaskForm from "./add-task-form/AddTaskForm";
 import styles from "./TodoList.module.css"
-import EditTaskModal from "./edit-task-modal/EditTaskModal";
+import {v4 as uuidv4} from 'uuid';
 
 const TodoList = () => {
+    const savedTasks = localStorage.getItem('tasks')
+    console.log(JSON.parse(savedTasks))
     const [tasks, setTasks] = useState([])
+
+    useEffect(() => {
+        setTasks(savedTasks ? JSON.parse(savedTasks) : []);
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [tasks])
     const addTask = (title) => {
         if (title) {
             const newTask = {
-                id: Math.random().toString(36).substring(2, 9),
+                id: uuidv4(),
                 title: title,
                 isCompleted: false
             }
             setTasks([...tasks, newTask])
+            console.log(newTask)
         }
     }
 
@@ -32,13 +43,15 @@ const TodoList = () => {
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.appWrapper}>
             <h5 className={styles.header}>List: </h5>
             <AddTaskForm addTask={addTask}/>
             {/*Search?*/}
             {tasks.map((task) => {
                 return (
-                    <ToDoListItem task={task} onDeleteTask={onDeleteTask} onEditTask={onTaskChanged}/>
+                    <div key={task.id}>
+                        <ToDoListItem task={task} onDeleteTask={onDeleteTask} onEditTask={onTaskChanged}/>
+                    </div>
                 )
             })
             }

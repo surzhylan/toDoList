@@ -21,7 +21,7 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
     }
 
     return (
-        <div className='todo-item' key={task.id}>
+        <div className="task-item" key={task.id}>
             <input type="checkbox" id="todo-item-isSolved" checked={isChecked} onChange={handleOnCheck}/>
             <span>{task.title}</span>
             <button type="button" onClick={() => setEditModalVisibility(true)}>change</button>

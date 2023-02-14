@@ -8,7 +8,6 @@ const EditTaskModal = ({task, onDeleteTask, onEditTask, isVisible, setVisibility
         setTitleInput(e.currentTarget.value)
     }
     const handleSubmit = (e) => {
-        e.preventDefault();
         let newTask = task
         newTask.title = titleInput
         onEditTask(newTask)
@@ -26,7 +25,7 @@ const EditTaskModal = ({task, onDeleteTask, onEditTask, isVisible, setVisibility
                 <input
                     className="input-title"
                     type="text"
-                    value={titleInput}
+                    value={titleInput.toString()}
                     onChange={handleTitleChange}
                     placeholder="Title"/>
                 <div>

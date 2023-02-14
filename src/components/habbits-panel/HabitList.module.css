@@ -1,0 +1,9 @@
+.app-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header {
+    font-size: x-large;
+}

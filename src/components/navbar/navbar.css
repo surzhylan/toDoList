@@ -1,0 +1,60 @@
+.menubar{
+    background-color: #53132b;
+    display: flex;
+    color: aliceblue;
+}
+
+.avatar{
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.avatar img{
+    width: 80px;
+    height: 80px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile h3{
+    margin-bottom: 7px;
+}
+
+.prof-small-text{
+    display: flex;
+    color: #d5c8ff;
+    font-size: 12px;
+    gap: 4px;
+}
+
+.prof-money img{
+    width: 24px;
+    height: 24px;;
+}
+
+.prof-money{
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.money-input{
+    background-color: #271b3d;
+    min-width: 200px;
+    margin: 0;
+    margin-top: 7px;
+    border-radius: 1px;
+    height: 12px;
+}
+
+.bg-money{
+    background-color: goldenrod;
+}
+
+.money-text{
+    margin-top: 5px;
+}

@@ -1,0 +1,10 @@
+.appWrapper{
+    height: 100%;
+    display: inline;
+}
+
+.lists{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}

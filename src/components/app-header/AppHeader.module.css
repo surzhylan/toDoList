@@ -1,0 +1,13 @@
+.app-wrapper {
+    padding: 3rem;
+    color: white;
+    width: 100%;
+    display: block;
+    background: #20315D;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.message {
+}

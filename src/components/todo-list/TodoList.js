@@ -4,7 +4,6 @@ import AddTaskForm from "../AddTaskForm";
 
 const TodoList = () => {
     const [tasks, setTask] = useState([])
-
     const addTask = (title) => {
         if (title) {
             const newTask = {

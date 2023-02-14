@@ -1,0 +1,12 @@
+.wrapper {
+    padding: 3rem;
+    color: white;
+    width: 100%;
+    display: block;
+    background: #20315D;
+    justify-content: center;
+    text-align: center;
+}
+
+.message {
+}

@@ -1,9 +1,7 @@
-.wrapper {
-    border: gray 1px solid;
-    margin: 2rem;
+.app-wrapper {
     display: flex;
-    flex: 1 0;
     flex-wrap: wrap;
+
 }
 
 .header {

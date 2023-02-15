@@ -1,4 +1,4 @@
-.editHabitModal {
+.editRewardModal {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.4);
@@ -11,11 +11,11 @@
     transform: scale(1);
 }
 
-.editHabitModalHidden{
+.editRewardModalHidden{
     transform: scale(0);
 }
 
-.editHabitModalContent{
+.editRewardModalContent{
     height: 20em;
     width: 80%;
     background-color: white;

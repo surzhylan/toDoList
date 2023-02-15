@@ -53,17 +53,15 @@ const RewardsList = ({coins, setCoins}) => {
     return (
         <div className={styles.rewardListWrapper}>
             <h5 className={styles.header}>Rewards: </h5>
-            <div className={styles.rewardlistTable}>
-                <AddRewardForm addReward={addReward}/>
-                {rewards.map((reward) => {
-                    return (
-                        <div key={reward.id}>
-                            <RewardItem reward={reward} onDeleteReward={deleteReward} onEditReward={changeReward} buyItem={butItem}/>
-                        </div>
-                    )
-                })
-                }
-            </div>
+            <AddRewardForm addReward={addReward}/>
+            {rewards.map((reward) => {
+                return (
+                    <div key={reward.id}>
+                        <RewardItem reward={reward} onDeleteReward={deleteReward} onEditReward={changeReward} buyItem={butItem}/>
+                    </div>
+                )
+            })
+            }
         </div>
     )
 }

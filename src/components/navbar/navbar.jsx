@@ -1,7 +1,7 @@
 import React from 'react';
 import './navbar.css'
 
-const Navbar = () => {
+const Navbar = ({coins}) => {
     return(
         <div className = "menubar">
             <div className='avatar'>
@@ -16,10 +16,7 @@ const Navbar = () => {
                 </div>
                 <div className='prof-money'>
                     <img src="coin.png" alt="" />
-                    <div className='prof-money-progress'>
-                        <div className='money-input bg-money'></div>
-                    </div>
-                    <span className='prof-small-text money-text'>50/50</span>
+                    <span className='prof-small-text money-text'>{coins}</span>
                 </div>
             </div>
         </div>

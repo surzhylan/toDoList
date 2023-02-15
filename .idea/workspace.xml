@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Repair to-do">
+    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Merge to main">
+      <change afterPath="$PROJECT_DIR$/src/components/rewards-panel/RewardsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rewards-panel/add-reward/AddRewardModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rewards-panel/edit-reward-form/EditRewardModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rewards-panel/reward/RewardItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addTodo/AddToDo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addTodo/addtodo.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/HabitList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/HabitList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/TodoList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/add-habit-form/AddHabitForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/add-habit-form/AddHabitForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/add-reward/AddTaskForm.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/edit-habit-modal/EditHabitModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/edit-reward-form/EditRewardModal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/edit-habit-modal/EditHabitModal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/habbits-panel/habit-item/HabitItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/ToDoList.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,28 +72,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/Documents/1. Projects/Web/readme&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Asus/Documents/1. Projects/Front/toDoList/src/components/rewards-panel",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel" />
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\add-reward" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\add-reward" />
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\edit-reward-form" />
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\store-panel\store-item" />
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\todo-list-panel" />
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components" />
-      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\todo-list" />
-      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src" />
-      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\todo-list\add-task-form" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,7 +112,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="752c2d34-63a2-4e6c-b171-337f217f6904" name="Changes" comment="" />
+      <changelist id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Merge to main" />
       <created>1676089766604</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -101,6 +123,7 @@
       <workItem from="1676352734307" duration="4823000" />
       <workItem from="1676357986352" duration="13456000" />
       <workItem from="1676383967271" duration="4120000" />
+      <workItem from="1676435267871" duration="11718000" />
     </task>
     <task id="LOCAL-00001" summary="add task function added">
       <created>1676205113280</created>

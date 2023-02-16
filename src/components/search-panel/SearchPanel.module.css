@@ -3,13 +3,6 @@
     text-align: center;
 }
 
-.app-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 1rem;
-}
-
 .input {
     width: 25rem;
     padding: 0.3rem 1rem;

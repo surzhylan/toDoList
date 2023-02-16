@@ -6,7 +6,7 @@ const SearchPanel = () => {
     const [query, setQuery] = useState('');
 
     return (
-        <form className={styles.searchWrapper}>
+        <form className={styles.searchDiv}>
             <input type="text"
                    id="search"
                    className={styles.input}

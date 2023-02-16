@@ -1,7 +1,5 @@
 import {useState} from "react";
-import EditTaskModal from "../edit-task-modal/EditTaskModal";
 import styles from "../todo-item/ToDoListItem.module.css"
-import { TbEdit } from 'react-icons/tb'
 import { Button } from "react-bootstrap";
 
 const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {

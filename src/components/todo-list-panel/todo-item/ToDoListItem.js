@@ -44,9 +44,6 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
                         <Button type="button" onClick={deleteTask}>delete</Button>
                     </div>
                 </div>
-
-                <EditTaskModal task={task} onEditTask={onEditTask} onDeleteTask={deleteTask} isVisible={isEditModalVisible}
-                            setVisibility={setEditModalVisibility}/>
             </div>
         </div>
     )

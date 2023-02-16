@@ -11,10 +11,6 @@
     align-items: center;
 }
 
-.taskItem:hover{
-    background-color: bisque;
-}
-
 .showTodo_text{
     display: flex;
     gap: 15px;
@@ -29,39 +25,4 @@
     position: absolute;
     right: 0;
     margin-right: 10px;
-}
-
-.editTodo{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.editTodoInputs{
-    display: flex;
-    width: 100%;
-    gap: 8px;
-    height: 40px;
-    
-}
-
-.editTodoInputs input{
-    width: 141px;
-    border-radius: 5px;
-    border-style: none;
-    background-color: #f9f9eb;
-    padding-left: 5px;
-}
-
-.editTodoButtons{
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    right: 0;
-    margin-right: 10px;
-}
-
-.input2{
-    width: 50px;
 }

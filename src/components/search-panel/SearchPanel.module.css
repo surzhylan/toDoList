@@ -1,4 +1,9 @@
-.searchWrapper {
+.searchDiv{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.app-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;

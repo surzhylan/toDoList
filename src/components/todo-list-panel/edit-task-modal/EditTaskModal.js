@@ -1,5 +1,7 @@
 import styles from "./EditTaskModal.module.css"
 import {useState} from "react";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const EditTaskModal = ({task, onDeleteTask, onEditTask, isVisible, setVisibility}) => {
     const [titleInput, setTitleInput] = useState(task.title);
@@ -23,12 +25,12 @@ const EditTaskModal = ({task, onDeleteTask, onEditTask, isVisible, setVisibility
             <form className={styles.editTaskModalContent} onClick={e => e.stopPropagation()}
                   onSubmit={handleSubmit}>
                 <input
-                    className="input-title"
+                    className={styles.inputTitle}
                     type="text"
                     value={titleInput.toString()}
                     onChange={handleTitleChange}
                     placeholder="Title"/>
-                <div>
+                <div className={styles.modalButtons}>
                     <input type="button" value="Cancel" onClick={handleCancel}/>
                     <input type="button" value="Delete" onClick={onDeleteTask}/>
                     <input type="submit" value="Save"/>

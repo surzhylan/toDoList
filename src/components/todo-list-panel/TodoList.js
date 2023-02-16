@@ -4,6 +4,7 @@ import AddTaskForm from "./add-task-form/AddTaskForm";
 import styles from "./TodoList.module.css"
 import {v4 as uuidv4} from 'uuid';
 
+
 const TodoList = () => {
     const savedTasks = localStorage.getItem('tasks')
     const [tasks, setTasks] = useState([])
@@ -44,16 +45,20 @@ const TodoList = () => {
 
     return (
         <div className={styles.appWrapper}>
-            <h5 className={styles.header}>List: </h5>
-            <AddTaskForm addTask={addTask}/>
-            {tasks.map((task) => {
-                return (
-                    <div key={task.id}>
-                        <ToDoListItem task={task} onDeleteTask={onDeleteTask} onEditTask={onTaskChanged}/>
-                    </div>
-                )
-            })
-            }
+            <h5 className={styles.header}>Tasks: </h5>
+            <div className={styles.todolist}>
+                <AddTaskForm addTask={addTask}/>
+                <div className={styles.todoTask}>
+                    {tasks.map((task) => {
+                        return (
+                            <div key={task.id}>
+                                <ToDoListItem task={task} onDeleteTask={onDeleteTask} onEditTask={onTaskChanged}/>
+                            </div>
+                        )
+                    })
+                    }
+                </div>
+            </div>
         </div>
     )
 }

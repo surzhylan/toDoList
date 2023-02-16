@@ -17,9 +17,23 @@
 
 .editTaskModalContent{
     height: 20em;
-    width: 80%;
+    width: 60%;
     background-color: white;
     color: black;
     display: inline;
     overflow: hidden;
+    padding: 30px;
+}
+
+.modalButtons input{
+    background-color: lavender;
+    border-style: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.inputTitle{
+    border-style: none;
+    width: 100%;
 }

@@ -2,6 +2,11 @@
     background-color: #53132b;
     display: flex;
     color: aliceblue;
+    /*position: absolute;
+    left: 0;
+    top: 0;
+    width: 380px;
+    height:100%;*/
 }
 
 .avatar{
@@ -15,6 +20,7 @@
 }
 
 .profile{
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
 }

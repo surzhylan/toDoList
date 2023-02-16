@@ -23,13 +23,6 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
         }
     }
 
-    const [edit, setEdit] = useState(null)
-    const [value,setValue] = useState('')
-    function editTodo(id, title){
-        setEdit(id)
-        setValue(title)
-    }
-
     return (
         <div className={styles.showTodo}>
             <div className={styles.taskItem} key={task.id}>

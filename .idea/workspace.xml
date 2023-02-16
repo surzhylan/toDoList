@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Rewards added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-panel/SearchPanel.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rewards-panel/reward/RewardItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/reward/RewardItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +109,7 @@
       <workItem from="1676357986352" duration="13456000" />
       <workItem from="1676383967271" duration="4120000" />
       <workItem from="1676435267871" duration="11718000" />
+      <workItem from="1676541874694" duration="2974000" />
     </task>
     <task id="LOCAL-00001" summary="add task function added">
       <created>1676205113280</created>

@@ -21,7 +21,7 @@ const App = () => {
     return (
         <div className={styles.appWrapper}>
             <Navbar coins={coins}/>
-            <SearchPanel/>
+            {/*<SearchPanel/>*/}
             <div className={styles.lists}>
                 <TodoList coins={coins} setCoins={setCoins}/>
                 <RewardsList coins={coins} setCoins={setCoins}/>

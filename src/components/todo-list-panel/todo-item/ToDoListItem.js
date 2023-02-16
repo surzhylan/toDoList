@@ -1,5 +1,8 @@
 import {useState} from "react";
 import EditTaskModal from "../edit-task-modal/EditTaskModal";
+import styles from "../todo-item/ToDoListItem.module.css"
+import { TbEdit } from 'react-icons/tb'
+import { Button } from "react-bootstrap";
 
 const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
     const [isChecked, setChecked] = useState(task.isCompleted)
@@ -20,15 +23,33 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
         }
     }
 
-    return (
-        <div className="task-item" key={task.id}>
-            <input type="checkbox" id="todo-item-isSolved" checked={isChecked} onChange={handleOnCheck}/>
-            <span>{task.title}</span>
-            <button type="button" onClick={() => setEditModalVisibility(true)}>change</button>
-            <button type="button" onClick={deleteTask}>delete</button>
+    const [edit, setEdit] = useState(null)
+    const [value,setValue] = useState('')
+    function editTodo(id, title){
+        setEdit(id)
+        setValue(title)
+    }
 
-            <EditTaskModal task={task} onEditTask={onEditTask} onDeleteTask={deleteTask} isVisible={isEditModalVisible}
-                           setVisibility={setEditModalVisibility}/>
+    return (
+        <div className={styles.showTodo}>
+            <div className={styles.taskItem} key={task.id}>
+                <div className={styles.showTodo_check}>
+                    <input type="checkbox" id="todo-item-isSolved" checked={isChecked} onChange={handleOnCheck}/>
+                </div>
+                <div className={styles.showTodo_text}>
+                    <div className={styles.contentText}>
+                        <span>{task.title}</span>
+                    </div>
+                    {/*<TbEdit type="button" onClick={() => setEditModalVisibility(true)}/>*/}
+                    <div className={styles.todoButtons}>
+                        <Button type="button" onClick={() => setEditModalVisibility(true)}>change</Button>
+                        <Button type="button" onClick={deleteTask}>delete</Button>
+                    </div>
+                </div>
+
+                <EditTaskModal task={task} onEditTask={onEditTask} onDeleteTask={deleteTask} isVisible={isEditModalVisible}
+                            setVisibility={setEditModalVisibility}/>
+            </div>
         </div>
     )
 }

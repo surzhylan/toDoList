@@ -1,9 +1,25 @@
-.app-wrapper {
+.appWrapper {
     display: flex;
-    flex-wrap: wrap;
-
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    margin-top: 40px;
+    margin-left: 30px;
 }
 
 .header {
     font-size: x-large;
 }
+
+.todolist{
+    border-radius: 4px;
+    background: #edecee;
+    padding: 10px;
+    /*position: relative;*/
+    height: calc(100% - 56px);
+    padding-bottom: 30px;
+    width: 450px;
+}
+
+/*.todoTask{
+    width: 500px;
+}*/

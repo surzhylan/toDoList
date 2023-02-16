@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 import {Button} from "react-bootstrap";
+import styles from "../TodoList.module.css";
+import { TbEdit } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
 
 const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
     const [isEditMode, setEditMode] = useState(false)
@@ -27,7 +30,7 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
     }
 
     return (
-        <div className="reward-item" key={reward.id}>
+        <div className={styles.rewardItem} key={reward.id}>
             {isEditMode
                 //On Edit mode
                 ? <form onSubmit={handleEdit}>
@@ -47,8 +50,10 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
                         <img src="coin.png" height={"20px"} width={"20px"} alt="coin"/>
                     </div>
 
-                    <button type="button" onClick={() => setEditMode(true)}>change</button>
-                    <button type="button" onClick={handleDelete}>delete</button>
+                    <div className={styles.btnReward}>
+                        <Button className="btn-sm" type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
+                        <Button className="btn-sm" type="button" onClick={handleDelete}><MdDelete /></Button>
+                    </div>
                 </div>
             }
         </div>

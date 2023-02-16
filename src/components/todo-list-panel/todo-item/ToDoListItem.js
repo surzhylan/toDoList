@@ -1,6 +1,9 @@
 import {useState} from "react";
+import { Button } from "react-bootstrap";
 import styles from "../todo-item/ToDoListItem.module.css"
-import {Button} from "react-bootstrap";
+import { TbEdit } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
+
 
 const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
     const [isChecked, setChecked] = useState(task.isCompleted)
@@ -44,14 +47,20 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
                 {isEditMode
                     //On Edit mode
                     ? <form onSubmit={handleEdit}>
-                        <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
-                            setTitle(e.target.value)
-                        }}/>
-                        <input type="number" placeholder="0" value={rewardAmount.toString()} onChange={(e) => {
-                            setRewardAmount(Number.parseInt(e.target.value))
-                        }}/>
-                        <Button type="button" onClick={() => setEditMode(false)}>cancel</Button>
-                        <Button type="button" onClick={handleEdit}>save</Button>
+                        <div className={styles.editTodo}>
+                            <div className={styles.editTodoInputs}>
+                                <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
+                                    setTitle(e.target.value)
+                                }}/>
+                                <input className={styles.input2} type="number" placeholder="0" value={rewardAmount.toString()} onChange={(e) => {
+                                    setRewardAmount(Number.parseInt(e.target.value))
+                                }}/>
+                            </div>
+                            <div className={styles.editTodoButtons}>
+                                <Button className="btn-sm" type="button" onClick={() => setEditMode(false)}>cancel</Button>
+                                <Button className="btn-sm" type="button" onClick={handleEdit}>save</Button>
+                            </div>
+                        </div>
                     </form>
 
                     //On show mode
@@ -65,8 +74,8 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
                         </div>
                         {/*<TbEdit type="button" onClick={() => setEditModalVisibility(true)}/>*/}
                         <div className={styles.todoButtons}>
-                            <Button type="button" onClick={() => setEditMode(true)}>change</Button>
-                            <Button type="button" onClick={handleDelete}>delete</Button>
+                            <Button type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
+                            <Button type="button" onClick={handleDelete}><MdDelete /></Button>
                         </div>
                     </div>}
 

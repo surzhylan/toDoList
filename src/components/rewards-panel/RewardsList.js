@@ -4,46 +4,9 @@ import styles from "./TodoList.module.css";
 import AddRewardForm from "./add-reward/AddRewardModal";
 import RewardItem from "./reward/RewardItem";
 
-const RewardsList = ({coins, setCoins}) => {
-    const savedRewards = localStorage.getItem('rewards')
-    const [rewards, setRewards] = useState([])
-
-    useEffect(() => {
-        setRewards(savedRewards ? JSON.parse(savedRewards) : []);
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem('rewards', JSON.stringify(rewards));
-    }, [rewards])
-
-    const addReward = (title) => {
-        if (title) {
-            const newReward = {
-                id: uuidv4(),
-                title: title,
-                cost: 5
-            }
-            setRewards([...rewards, newReward])
-            console.log(newReward)
-        }
-    }
-
-    const deleteReward = (deletedId) => {
-        let newReward = rewards.filter(reward => reward.id !== deletedId)
-        setRewards(newReward)
-    }
-
-    const changeReward = (changedReward) => {
-        if (changedReward) {
-            const index = rewards.findIndex((obj => obj.id === changedReward.id))
-            let newReward = [...rewards]
-            newReward[index] = changedReward
-            setRewards(newReward)
-        }
-    }
-
+const RewardsList = ({rewards, addReward, deleteReward, changeReward, coins, setCoins}) => {
     const butItem = (cost) => {
-        if(coins >= cost) {
+        if (coins >= cost) {
             setCoins(coins - cost)
         } else {
             window.alert("Not enough money")
@@ -53,15 +16,18 @@ const RewardsList = ({coins, setCoins}) => {
     return (
         <div className={styles.rewardListWrapper}>
             <h5 className={styles.header}>Rewards: </h5>
-            <AddRewardForm addReward={addReward}/>
-            {rewards.map((reward) => {
-                return (
-                    <div key={reward.id}>
-                        <RewardItem reward={reward} onDeleteReward={deleteReward} onEditReward={changeReward} buyItem={butItem}/>
-                    </div>
-                )
-            })
-            }
+            <div className={styles.rewardlistTable}>
+                <AddRewardForm addReward={addReward}/>
+                {rewards.map((reward) => {
+                    return (
+                        <div key={reward.id}>
+                            <RewardItem reward={reward} onDeleteReward={deleteReward} onEditReward={changeReward}
+                                        buyItem={butItem}/>
+                        </div>
+                    )
+                })
+                }
+            </div>
         </div>
     )
 }

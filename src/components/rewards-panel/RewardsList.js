@@ -1,5 +1,3 @@
-import {useEffect, useState} from "react";
-import {v4 as uuidv4} from "uuid";
 import styles from "./TodoList.module.css";
 import AddRewardForm from "./add-reward/AddRewardModal";
 import RewardItem from "./reward/RewardItem";

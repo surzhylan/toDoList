@@ -29,6 +29,12 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
         }
     }
 
+    const handleOnCancel = () => {
+        setEditMode(false)
+        setTitle(reward.title)
+        setCost(reward.cost)
+    }
+
     return (
         <div className={styles.rewardItem} key={reward.id}>
             {isEditMode
@@ -40,7 +46,7 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
                     <input type="number" placeholder="0" value={cost.toString()} onChange={(e) => {
                         setCost(Number.parseInt(e.target.value))
                     }}/>
-                    <Button type="button" onClick={() => setEditMode(false)}>cancel</Button>
+                    <Button type="button" onClick={handleOnCancel}>cancel</Button>
                     <Button type="button" onClick={handleEdit}>save</Button>
                 </form>
                 : <div>

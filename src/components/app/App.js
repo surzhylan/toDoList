@@ -36,11 +36,6 @@ const App = () => {
         localStorage.setItem('rewards', JSON.stringify(rewards));
     }, [rewards])
 
-    //Coins
-    const handleOnReward = (rewardAmount) => {
-        setCoins(coins + rewardAmount)
-    }
-
     //Tasks
     const addTask = (title) => {
         if (title) {
@@ -55,12 +50,32 @@ const App = () => {
         }
     }
 
-    const changeTask = (task) => {
-        if (task) {
-            const index = tasks.findIndex((obj => obj.id === task.id))
+    const changeTask = (newTask) => {
+        if (newTask) {
+            const index = tasks.findIndex((obj => obj.id === newTask.id))
+
+
+
+            if (newTask.isCompleted !== tasks[index]) {
+
+            }
+
             let newTasks = [...tasks]
-            newTasks[index] = task
+            newTasks[index] = newTask
             setTasks(newTasks)
+        }
+    }
+
+    const checkTask = (task) => {
+        if(task) {
+            const index = tasks.findIndex((obj => obj.id === task.id))
+
+            //Give reward if check was changed
+            console.log("New task:" + task.title + task.isCompleted)
+            console.log("Prev task:" + tasks[index].title + tasks[index].isCompleted)
+
+            if (task.isCompleted === true) setCoins(coins + task.rewardAmount)
+            else setCoins(coins - task.rewardAmount)
         }
     }
 
@@ -121,7 +136,7 @@ const App = () => {
             <div className={styles.lists}>
                 <TodoList coins={coins} setCoins={setCoins} tasks={getFilteredTasks()} addTask={addTask}
                           changeTask={changeTask}
-                          deleteTask={deleteTask} setReward={handleOnReward}/>
+                          deleteTask={deleteTask} onCheckTask={checkTask}/>
                 <RewardsList coins={coins} setCoins={setCoins} rewards={getFilteredRewards()} addReward={addReward}
                              changeReward={changeReward} deleteReward={deleteReward}/>
             </div>

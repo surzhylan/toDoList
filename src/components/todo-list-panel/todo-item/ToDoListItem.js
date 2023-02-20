@@ -1,8 +1,8 @@
 import {useState} from "react";
 import styles from "../todo-item/ToDoListItem.module.css"
-import { Button } from "react-bootstrap";
+import {Button} from "react-bootstrap";
 
-const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
+const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
     const [isChecked, setChecked] = useState(task.isCompleted)
     const [isEditMode, setEditMode] = useState(false)
     const [title, setTitle] = useState(task.title)
@@ -10,10 +10,9 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
     const handleOnCheck = (e) => {
         const newVal = !isChecked
         setChecked(newVal)
-
         const newTask = task
         newTask.isCompleted = newVal
-        onEditTask(newTask)
+        onCheckTask(newTask)
     }
 
     const deleteTask = () => {
@@ -24,7 +23,7 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
     }
 
     const handleEdit = () => {
-        if(title && rewardAmount) {
+        if (title && rewardAmount) {
             const newTask = task
             newTask.title = title
             newTask.rewardAmount = rewardAmount
@@ -40,7 +39,6 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
         setRewardAmount(task.rewardAmount)
         setEditMode(false)
     }
-
 
 
     return (
@@ -62,8 +60,7 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask}) => {
                     //On show mode
                     : <div className={styles.showTodo_text}>
                         <div className={styles.showTodo_check}>
-                            <input type="checkbox" id="todo-item-isSolved" checked={isChecked}
-                                   onChange={handleOnCheck}/>
+                            <input type="checkbox" id="todo-item-isSolved" checked={isChecked} onChange={handleOnCheck}/>
                         </div>
                         <div className={styles.contentText}>
                             <span>{task.title}</span>

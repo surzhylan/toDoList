@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Rewards fixed">
+    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Edit mode fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +115,7 @@
       <workItem from="1676689657191" duration="6082000" />
       <workItem from="1676698259663" duration="1620000" />
       <workItem from="1676804251848" duration="3867000" />
-      <workItem from="1676905572146" duration="858000" />
+      <workItem from="1676905572146" duration="2411000" />
     </task>
     <task id="LOCAL-00001" summary="add task function added">
       <created>1676205113280</created>
@@ -171,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676905926613</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Edit mode fixed">
+      <created>1676906513213</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676906513213</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +209,7 @@
     <MESSAGE value="Rewards added" />
     <MESSAGE value="Filter function added" />
     <MESSAGE value="Rewards fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewards fixed" />
+    <MESSAGE value="Edit mode fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit mode fixed" />
   </component>
 </project>

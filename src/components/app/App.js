@@ -105,7 +105,7 @@ const App = () => {
     }
 
     const getFilteredRewards = () => {
-        if (filterQuery == null) return tasks
+        if (filterQuery == null) return rewards
         else return rewards.filter((reward) => {
             return reward.title.toLowerCase().includes(filterQuery.toLowerCase())
         })

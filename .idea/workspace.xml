@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Filter function added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/rewards-panel/RewardsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/RewardsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +113,7 @@
       <workItem from="1676689657191" duration="6082000" />
       <workItem from="1676698259663" duration="1620000" />
       <workItem from="1676804251848" duration="3867000" />
+      <workItem from="1676905572146" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="add task function added">
       <created>1676205113280</created>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676808097641</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Filter function added">
+      <created>1676808363569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676808363569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

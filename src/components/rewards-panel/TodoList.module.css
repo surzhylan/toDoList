@@ -1,9 +1,20 @@
 .rewardListWrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 
 }
 
 .header {
     font-size: x-large;
+}
+
+.rewardlistTable{
+    border-radius: 4px;
+    background: #edecee;
+    padding: 10px;
+    /*position: relative;*/
+    height: calc(100% - 56px);
+    padding-bottom: 30px;
+    width: 450px;
 }

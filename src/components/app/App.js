@@ -132,13 +132,19 @@ const App = () => {
     return (
         <div className={styles.appWrapper}>
             <Navbar coins={coins}/>
-            <SearchPanel query={filterQuery} setNewQuery={handleFilterQueryChange}/>
+            <div className={styles.searchDiv}>
+                <SearchPanel query={filterQuery} setNewQuery={handleFilterQueryChange}/>
+            </div>
             <div className={styles.lists}>
-                <TodoList coins={coins} setCoins={setCoins} tasks={getFilteredTasks()} addTask={addTask}
-                          changeTask={changeTask}
-                          deleteTask={deleteTask} onCheckTask={checkTask}/>
-                <RewardsList coins={coins} setCoins={setCoins} rewards={getFilteredRewards()} addReward={addReward}
-                             changeReward={changeReward} deleteReward={deleteReward}/>
+                <div className={styles.appTodo}>
+                    <TodoList coins={coins} setCoins={setCoins} tasks={getFilteredTasks()} addTask={addTask}
+                            changeTask={changeTask}
+                            deleteTask={deleteTask} onCheckTask={checkTask}/>
+                </div>
+                <div className={styles.rewardList}>
+                    <RewardsList coins={coins} setCoins={setCoins} rewards={getFilteredRewards()} addReward={addReward}
+                                changeReward={changeReward} deleteReward={deleteReward}/>
+                </div>
             </div>
         </div>
     )

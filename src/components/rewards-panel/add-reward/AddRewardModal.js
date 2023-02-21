@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from './AddTaskForm.module.css'
 
 const AddRewardForm = ({addReward}) => {
     const [titleInput, setTitleInput] = useState("")
@@ -18,7 +19,7 @@ const AddRewardForm = ({addReward}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={styles.container} onSubmit={handleSubmit}>
             <input className="input-title"
                    type="text"
                    value={titleInput}

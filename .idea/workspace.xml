@@ -4,11 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="Edit mode fixed">
+    <list default="true" id="71ca1e9b-66ad-47cf-9ac9-e5046d4b3ba6" name="Changes" comment="on check task fixed">
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatarImages/avatar7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/cake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/coffee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/perfume.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/sushi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/rewardsImages/water.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/rewards-panel/reward/DefaultRewardItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/avatar-images.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/default-rewards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo-list-panel/todo-item/ToDoListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rewards-panel/RewardsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/RewardsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rewards-panel/reward/RewardItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rewards-panel/reward/RewardItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/coin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/default.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/pet_images.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/snake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/uncheck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/unchecked.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +106,11 @@
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\add-reward" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src" />
+      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\public" />
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\add-reward" />
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\rewards-panel\edit-reward-form" />
       <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\store-panel\store-item" />
-      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components\todo-list-panel" />
-      <recent name="C:\Users\Asus\Documents\1. Projects\Front\toDoList\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +142,8 @@
       <workItem from="1676689657191" duration="6082000" />
       <workItem from="1676698259663" duration="1620000" />
       <workItem from="1676804251848" duration="3867000" />
-      <workItem from="1676905572146" duration="2411000" />
+      <workItem from="1676905572146" duration="3023000" />
+      <workItem from="1676970280287" duration="4645000" />
     </task>
     <task id="LOCAL-00001" summary="add task function added">
       <created>1676205113280</created>
@@ -180,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676906513213</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="on check task fixed">
+      <created>1676908029609</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676908029609</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +245,7 @@
     <MESSAGE value="Filter function added" />
     <MESSAGE value="Rewards fixed" />
     <MESSAGE value="Edit mode fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit mode fixed" />
+    <MESSAGE value="on check task fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="on check task fixed" />
   </component>
 </project>

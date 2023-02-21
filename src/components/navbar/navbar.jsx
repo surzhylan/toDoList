@@ -1,32 +1,32 @@
 import React, {useEffect, useState} from 'react';
 import './navbar.css'
-import PetImages from "../../images/pet_images";
 import { Button } from 'react-bootstrap';
+import AvatarImages from "../../utils/avatar-images";
 
 const Navbar = ({coins}) => {
     const savedUser = localStorage.getItem('user')
 
     const [user, setUser] = useState({
-        petName: '',
         userName: '',
-        petImageId: 0
+        userLogin: '',
+        userImageId: 0
     })
 
-    const [petNameInput, setPetNameInput] = useState(user.petName)
-    const [userNameInput, setUserNameInput] = useState(user.userName)
-    const [petImageInputId, setPetImageInputIdId] = useState(0)
+    const [userNameInput, setUserNameInput] = useState('')
+    const [userLoginInput, setUserLoginInput] = useState('')
+    const [userImageInputId, setUserImageInputIdId] = useState(0)
 
     const [isEditMode, setEditMode] = useState(false)
 
     useEffect(() => {
         setUser(savedUser ? JSON.parse(savedUser) : {
-            petName: 'Pet',
-            userName: 'user',
-            petImageId: 0
+            userName: 'User',
+            userLogin: 'user',
+            userImageId: 0
         });
+        setUserLoginInput(user.userLogin)
         setUserNameInput(user.userName)
-        setPetNameInput(user.petName)
-        setPetImageInputIdId(user.petImageId)
+        setUserImageInputIdId(user.userImageId)
     }, [])
 
     useEffect(() => {
@@ -34,11 +34,11 @@ const Navbar = ({coins}) => {
     }, [user])
 
     const handleUserEdit = () => {
-        if (userNameInput && petNameInput && petImageInputId) {
+        if (userLoginInput && userNameInput && userImageInputId) {
             const newUser = {
-                petName: petNameInput,
                 userName: userNameInput,
-                petImageId: petImageInputId
+                userLogin: userLoginInput,
+                userImageId: userImageInputId
             }
             setUser(newUser)
             setEditMode(false)
@@ -48,9 +48,10 @@ const Navbar = ({coins}) => {
     }
 
     const handleCancel = () => {
+        setUserLoginInput(user.userLogin)
         setUserNameInput(user.userName)
-        setPetNameInput(user.petName)
-        setPetImageInputIdId(user.petImageId)
+        setUserImageInputIdId(user.userImageId)
+
 
         setEditMode(false)
     }
@@ -60,19 +61,19 @@ const Navbar = ({coins}) => {
             {
                 isEditMode ? <div className='avatarStatus'>
                                 <div className='avatarEdit'>
-                                    <img src={PetImages[petImageInputId]} alt='Your Pet'/>
-                                    <Button className='btn-sm' variant="light" value={petImageInputId} onClick={()=> {setPetImageInputIdId((petImageInputId + 1) % PetImages.length)}}>Change Image</Button>
+                                    <img src={AvatarImages[userImageInputId]} alt='Your avatar'/>
+                                    <Button className='btn-sm' variant="light" value={userImageInputId} onClick={()=> {setUserImageInputIdId((userImageInputId + 1) % AvatarImages.length)}}>Change Image</Button>
                                 </div>
                                 <div className='statusEdit'>
                                     <div className='profileEdit'>
-                                        <input type="text" placeholder="Enter new pet name" value={petNameInput.toString()}
+                                        <input type="text" placeholder="Enter new user name" value={userNameInput.toString()}
                                             onChange={(e) => {
-                                                setPetNameInput(e.target.value)
+                                                setUserNameInput(e.target.value)
                                             }}/>
                                         <div className='prof-small-text'>
-                                            <span>@ <input type="text" placeholder="Enter new pet name"
-                                                        value={userNameInput.toString()} onChange={(e) => {
-                                                setUserNameInput(e.target.value)
+                                            <span>@ <input type="text" placeholder="Enter new user name"
+                                                        value={userLoginInput.toString()} onChange={(e) => {
+                                                setUserLoginInput(e.target.value)
                                             }}/></span>
                                         </div>
                                     </div>
@@ -91,14 +92,14 @@ const Navbar = ({coins}) => {
 
                     : <div className='avatarStatus'>
                         <div className='avatar'>
-                            <img src={PetImages[user.petImageId]} alt=''/>
+                            <img src={AvatarImages[user.userImageId]} alt=''/>
                         </div>
                         <div className='status'>
                             <div className='status_info'>
                                 <div className='profile'>
-                                    <h3>{user.petName}</h3>
+                                    <h3>{user.userName}</h3>
                                     <div className='prof-small-text'>
-                                        <span>@{user.userName}</span>
+                                        <span>@{user.userLogin}</span>
                                     </div>
                                 </div>
                                 <div className='prof-money'>

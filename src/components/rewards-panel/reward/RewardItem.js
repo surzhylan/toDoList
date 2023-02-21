@@ -50,12 +50,11 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
                     <Button type="button" onClick={handleEdit}>save</Button>
                 </form>
                 : <div>
-                    <span>{reward.title}</span>
                     <div onClick={() => buyItem(reward.cost)}>
+                        <span>{reward.title}</span>
                         <span>{reward.cost}</span>
-                        <img src="coin.png" height={"20px"} width={"20px"} alt="coin"/>
+                        <img src="/coin.png" height={"20px"} width={"20px"} alt="coin"/>
                     </div>
-
                     <div className={styles.btnReward}>
                         <Button className="btn-sm" type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
                         <Button className="btn-sm" type="button" onClick={handleDelete}><MdDelete /></Button>

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './navbar.css'
 import PetImages from "../../images/pet_images";
+import { Button } from 'react-bootstrap';
 
 const Navbar = ({coins}) => {
     const savedUser = localStorage.getItem('user')
@@ -57,54 +58,60 @@ const Navbar = ({coins}) => {
     return (
         <div className="menubar">
             {
-                isEditMode ? <div>
-                        <div className='avatar'>
-                            <img src={PetImages[petImageInputId]} alt='Your Pet'/>
-                            <button value={petImageInputId} onClick={()=> {setPetImageInputIdId((petImageInputId + 1) % PetImages.length)}}>Change Image</button>
-                        </div>
-                        <div className='status'>
-                            <div className='profile'>
-                                <input type="text" placeholder="Enter new pet name" value={petNameInput.toString()}
-                                       onChange={(e) => {
-                                           setPetNameInput(e.target.value)
-                                       }}/>
-                                <div className='prof-small-text'>
-                                    <span>@<input type="text" placeholder="Enter new pet name"
-                                                  value={userNameInput.toString()} onChange={(e) => {
-                                        setUserNameInput(e.target.value)
-                                    }}/></span>
+                isEditMode ? <div className='avatarStatus'>
+                                <div className='avatarEdit'>
+                                    <img src={PetImages[petImageInputId]} alt='Your Pet'/>
+                                    <Button className='btn-sm' variant="light" value={petImageInputId} onClick={()=> {setPetImageInputIdId((petImageInputId + 1) % PetImages.length)}}>Change Image</Button>
+                                </div>
+                                <div className='statusEdit'>
+                                    <div className='profileEdit'>
+                                        <input type="text" placeholder="Enter new pet name" value={petNameInput.toString()}
+                                            onChange={(e) => {
+                                                setPetNameInput(e.target.value)
+                                            }}/>
+                                        <div className='prof-small-text'>
+                                            <span>@ <input type="text" placeholder="Enter new pet name"
+                                                        value={userNameInput.toString()} onChange={(e) => {
+                                                setUserNameInput(e.target.value)
+                                            }}/></span>
+                                        </div>
+                                    </div>
+                                    <div className='prof-money'>
+                                        <img src="coin.png" alt=""/>
+                                        <span className='prof-small-text money-text'>{coins}</span>
+                                    </div>
+                                </div>
+                                <div className='status_editBtn'>
+                                    <Button className='btn-sm' variant="light" onClick={handleCancel}>Cancel
+                                    </Button>
+                                    <Button className='btn-sm' variant="success" onClick={handleUserEdit}>Save
+                                    </Button>
                                 </div>
                             </div>
-                            <div className='prof-money'>
-                                <img src="coin.png" alt=""/>
-                                <span className='prof-small-text money-text'>{coins}</span>
-                            </div>
-                        </div>
-                        <button onClick={handleCancel}>Cancel
-                        </button>
-                        <button onClick={handleUserEdit}>Save
-                        </button>
-                    </div>
 
-                    : <div>
+                    : <div className='avatarStatus'>
                         <div className='avatar'>
                             <img src={PetImages[user.petImageId]} alt=''/>
                         </div>
                         <div className='status'>
-                            <div className='profile'>
-                                <h3>{user.petName}</h3>
-                                <div className='prof-small-text'>
-                                    <span>@{user.userName}</span>
+                            <div className='status_info'>
+                                <div className='profile'>
+                                    <h3>{user.petName}</h3>
+                                    <div className='prof-small-text'>
+                                        <span>@{user.userName}</span>
+                                    </div>
+                                </div>
+                                <div className='prof-money'>
+                                    <img src="coin.png" alt=""/>
+                                    <span className='prof-small-text money-text'>{coins}</span>
                                 </div>
                             </div>
-                            <div className='prof-money'>
-                                <img src="coin.png" alt=""/>
-                                <span className='prof-small-text money-text'>{coins}</span>
+                            <div className='status_edit'>
+                                <Button className='btn-sm statusBtn' variant="light" onClick={() => {
+                                    setEditMode(true)
+                                }}>Edit
+                                </Button>
                             </div>
-                            <button onClick={() => {
-                                setEditMode(true)
-                            }}>Edit
-                            </button>
                         </div>
                     </div>
             }

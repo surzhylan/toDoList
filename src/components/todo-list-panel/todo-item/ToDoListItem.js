@@ -1,6 +1,8 @@
 import {useState} from "react";
 import styles from "../todo-item/ToDoListItem.module.css"
 import {Button} from "react-bootstrap";
+import { TbEdit } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
 
 const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
     const [isChecked, setChecked] = useState(task.isCompleted)
@@ -67,8 +69,8 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
                         </div>
                         {/*<TbEdit type="button" onClick={() => setEditModalVisibility(true)}/>*/}
                         <div className={styles.todoButtons}>
-                            <Button type="button" onClick={() => setEditMode(true)}>change</Button>
-                            <Button type="button" onClick={deleteTask}>delete</Button>
+                            <Button type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
+                            <Button type="button" onClick={deleteTask}><MdDelete /></Button>
                         </div>
                     </div>}
             </div>

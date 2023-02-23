@@ -28,14 +28,16 @@ const RewardsList = ({rewards, addReward, deleteReward, changeReward, coins, set
                     )
                 })
                 }
-                {defaultRewards.map((defaultReward) => {
-                    return (
-                        <div key={defaultReward.id}>
-                            <DefaultRewardItem defaultReward={defaultReward} buyItem={butItem}/>
-                        </div>
-                    )
-                })
-                }
+                <div className={styles.default_reward}>
+                    {defaultRewards.map((defaultReward) => {
+                        return (
+                            <div key={defaultReward.id}>
+                                <DefaultRewardItem defaultReward={defaultReward} buyItem={butItem}/>
+                            </div>
+                        )
+                    })
+                    }
+                </div>
             </div>
         </div>
     )

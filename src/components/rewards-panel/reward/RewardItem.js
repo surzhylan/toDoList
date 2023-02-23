@@ -39,25 +39,41 @@ const RewardItem = ({reward, onDeleteReward, onEditReward, buyItem}) => {
         <div className={styles.rewardItem} key={reward.id}>
             {isEditMode
                 //On Edit mode
-                ? <form onSubmit={handleEdit}>
-                    <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
-                        setTitle(e.target.value)
-                    }}/>
-                    <input type="number" placeholder="0" value={cost.toString()} onChange={(e) => {
-                        setCost(Number.parseInt(e.target.value))
-                    }}/>
-                    <Button type="button" onClick={handleOnCancel}>cancel</Button>
-                    <Button type="button" onClick={handleEdit}>save</Button>
-                </form>
-                : <div>
-                    <div onClick={() => buyItem(reward.cost)}>
-                        <span>{reward.title}</span>
-                        <span>{reward.cost}</span>
-                        <img src="/coin.png" height={"20px"} width={"20px"} alt="coin"/>
+                ? <div className={styles.editRewardForm}>
+                    <form onSubmit={handleEdit}>
+                        <div className={styles.editReward}>
+                            <div className={styles.editRewardInputs}>
+                                <div className={styles.editRewardInput1}>
+                                    <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
+                                        setTitle(e.target.value)
+                                    }}/>
+                                </div>
+                                <div className={styles.editRewardInput2}>
+                                    <input type="number" placeholder="0" value={cost.toString()} onChange={(e) => {
+                                        setCost(Number.parseInt(e.target.value))
+                                    }}/>
+                                </div>
+                            </div>
+                            <div className={styles.editRewardBtn}>
+                                <Button variant="light" className="btn-sm" type="button" onClick={handleOnCancel}>cancel</Button>
+                                <Button variant="light" className="btn-sm" type="button" onClick={handleEdit}>save</Button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                : <div className={styles.rewardItem1}>
+                    <div className={styles.rewardItem1_text} onClick={() => buyItem(reward.cost)}>
+                        <div className={styles.reward1Title}>
+                            <span>{reward.title}</span>
+                        </div>
+                        <div className={styles.rewardCoin}>
+                            <span>{reward.cost}</span>
+                            <img src="/coin.png" height={"20px"} width={"20px"} alt="coin"/>
+                        </div>
                     </div>
                     <div className={styles.btnReward}>
-                        <Button className="btn-sm" type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
-                        <Button className="btn-sm" type="button" onClick={handleDelete}><MdDelete /></Button>
+                        <Button variant="light" className="btn-sm" type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
+                        <Button variant="light"  className="btn-sm" type="button" onClick={handleDelete}><MdDelete /></Button>
                     </div>
                 </div>
             }

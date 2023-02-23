@@ -23,4 +23,10 @@
     line-height: 1.43;
     color: #4e4a57;
     border-radius: 4px;
+    font-weight: 500;
+}
+
+.container input:hover{
+    background-color: rgba(26,24,29,.1);
+    cursor: pointer;
 }

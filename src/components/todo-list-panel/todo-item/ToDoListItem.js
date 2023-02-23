@@ -49,14 +49,24 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
                 {isEditMode
                     //On Edit mode
                     ? <form onSubmit={handleEdit}>
-                        <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
-                            setTitle(e.target.value)
-                        }}/>
-                        <input type="number" placeholder="0" value={rewardAmount.toString()} onChange={(e) => {
-                            setRewardAmount(Number.parseInt(e.target.value))
-                        }}/>
-                        <Button type="button" onClick={handleOnCancel}>cancel</Button>
-                        <Button type="button" onClick={handleEdit}>save</Button>
+                        <div className={styles.editTask}>
+                            <div className={styles.editTaskInputs}>
+                                <div className={styles.editTaskInput1}>
+                                    <input type="text" placeholder="Enter new title" value={title.toString()} onChange={(e) => {
+                                        setTitle(e.target.value)
+                                    }}/>
+                                </div>
+                                <div className={styles.editTaskInput2}>
+                                    <input type="number" placeholder="0" value={rewardAmount.toString()} onChange={(e) => {
+                                        setRewardAmount(Number.parseInt(e.target.value))
+                                    }}/>
+                                </div>
+                            </div>
+                            <div className={styles.editTaskBtn}>
+                                <Button variant="light" type="button" onClick={handleOnCancel}>cancel</Button>
+                                <Button variant="light" type="button" onClick={handleEdit}>save</Button>
+                            </div>
+                        </div>
                     </form>
 
                     //On show mode
@@ -69,8 +79,8 @@ const ToDoListItem = ({task, onDeleteTask, onEditTask, onCheckTask}) => {
                         </div>
                         {/*<TbEdit type="button" onClick={() => setEditModalVisibility(true)}/>*/}
                         <div className={styles.todoButtons}>
-                            <Button type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
-                            <Button type="button" onClick={deleteTask}><MdDelete /></Button>
+                            <Button variant="light" type="button" onClick={() => setEditMode(true)}><TbEdit /></Button>
+                            <Button variant="light" type="button" onClick={deleteTask}><MdDelete /></Button>
                         </div>
                     </div>}
             </div>

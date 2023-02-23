@@ -7,6 +7,7 @@
 
 .header {
     font-size: x-large;
+    margin-bottom: 25px;
 }
 
 .rewardlistTable{
@@ -17,4 +18,152 @@
     height: calc(100% - 56px);
     padding-bottom: 30px;
     width: 500px;
+}
+
+.rewardItem{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /*border: 1px solid black;*/
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.rewardItem:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.rewardItem1{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.rewardItem1_text{
+    display: flex;
+    gap: 20px;
+    width: 370px;
+    position: relative;
+}
+
+.rewardCoin{
+    /*background-color: #ffeecc;*/
+    position: absolute;
+    right: 0;
+    
+}
+
+.btnReward{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    width: 15%;
+}
+
+.btnReward button{
+    background-color: #ffeecc;
+}
+
+.default_reward{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: 40px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.default_reward1{
+    height: 9.5rem;
+    width: 105px;
+    border-radius: 4px;
+    background-color: #fff;
+    /*-webkit-box-shadow: 0 1px 3px 0 rgba(26,24,29,.12),0 1px 2px 0 rgba(26,24,29,.24);*/
+    box-shadow: 0 1px 3px 0 rgba(26,24,29,.12),0 1px 2px 0 rgba(26,24,29,.24);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 450;
+}
+
+.default_reward1_img{
+    padding: 12px 13px;
+}
+
+.default_reward1_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.default_reward1_price{
+    /*border: 1px solid black;*/
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    background-color: #fff7e6;
+    align-items: center;
+}
+
+.default_reward1_price span{
+    margin-right: 5px;
+}
+
+.editReward{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.editRewardInput1 input{
+    width: 220px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    border-style: none;
+    box-shadow: 0 1px 3px 0 rgba(26,24,29,.12),0 1px 2px 0 rgba(26,24,29,.24);
+}
+
+.editRewardInput1 input:hover{
+    background-color: #f5f5f5;
+}
+
+.editRewardInput2 input{
+    width: 90px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    border-style: none;
+    box-shadow: 0 1px 3px 0 rgba(26,24,29,.12),0 1px 2px 0 rgba(26,24,29,.24);
+}
+
+.editRewardInput2 input:hover{
+    background-color: #f5f5f5;
+}
+
+.editRewardBtn{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+}
+
+.editRewardBtn button{
+    padding: 6px 10px;
+    background-color: #ffeecc;
+}
+
+.editRewardInputs{
+    display: flex;
+    gap: 10px;
 }

@@ -8,6 +8,8 @@
 
 .header {
     font-size: x-large;
+    margin-bottom: 25px;
+    /*color: #53132b;*/
 }
 
 .todolist{

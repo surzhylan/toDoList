@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './navbar.css'
 import { Button } from 'react-bootstrap';
 import AvatarImages from "../../utils/avatar-images";
+import { FaUserEdit } from "react-icons/fa";
 
 const Navbar = ({coins}) => {
     const savedUser = localStorage.getItem('user')
@@ -58,23 +59,49 @@ const Navbar = ({coins}) => {
 
     return (
         <div className="menubar">
-            {
-                isEditMode ? <div className='avatarStatus'>
-                                <div className='avatarEdit'>
-                                    <img src={AvatarImages[userImageInputId]} alt='Your avatar'/>
-                                    <Button className='btn-sm' variant="light" value={userImageInputId} onClick={()=> {setUserImageInputIdId((userImageInputId + 1) % AvatarImages.length)}}>Change Image</Button>
+            <div>
+                {
+                    isEditMode ? <div className='avatarStatus'>
+                                    <div className='avatarEdit'>
+                                        <img src={AvatarImages[userImageInputId]} alt='Your avatar'/>
+                                        <Button className='btn-sm' variant="light" value={userImageInputId} onClick={()=> {setUserImageInputIdId((userImageInputId + 1) % AvatarImages.length)}}>Change Image</Button>
+                                    </div>
+                                    <div className='statusEdit'>
+                                        <div className='profileEdit'>
+                                            <input type="text" placeholder="Enter new user name" value={userNameInput.toString()}
+                                                onChange={(e) => {
+                                                    setUserNameInput(e.target.value)
+                                                }}/>
+                                            <div className='prof-small-text'>
+                                                <span>@ <input type="text" placeholder="Enter new user name"
+                                                            value={userLoginInput.toString()} onChange={(e) => {
+                                                    setUserLoginInput(e.target.value)
+                                                }}/></span>
+                                            </div>
+                                        </div>
+                                        <div className='prof-money'>
+                                            <img src="coin.png" alt=""/>
+                                            <span className='prof-small-text money-text'>{coins}</span>
+                                        </div>
+                                    </div>
+                                    <div className='status_editBtn'>
+                                        <Button className='btn-sm' variant="light" onClick={handleCancel}>Cancel
+                                        </Button>
+                                        <Button className='btn-sm' variant="success" onClick={handleUserEdit}>Save
+                                        </Button>
+                                    </div>
                                 </div>
-                                <div className='statusEdit'>
-                                    <div className='profileEdit'>
-                                        <input type="text" placeholder="Enter new user name" value={userNameInput.toString()}
-                                            onChange={(e) => {
-                                                setUserNameInput(e.target.value)
-                                            }}/>
+
+                        : <div className='avatarStatus'>
+                            <div className='avatar'>
+                                <img src={AvatarImages[user.userImageId]} alt=''/>
+                            </div>
+                            <div className='status'>
+                                <div className='status_info'>
+                                    <div className='profile'>
+                                        <h3>{user.userName}</h3>
                                         <div className='prof-small-text'>
-                                            <span>@ <input type="text" placeholder="Enter new user name"
-                                                        value={userLoginInput.toString()} onChange={(e) => {
-                                                setUserLoginInput(e.target.value)
-                                            }}/></span>
+                                            <span>@{user.userLogin}</span>
                                         </div>
                                     </div>
                                     <div className='prof-money'>
@@ -82,40 +109,20 @@ const Navbar = ({coins}) => {
                                         <span className='prof-small-text money-text'>{coins}</span>
                                     </div>
                                 </div>
-                                <div className='status_editBtn'>
-                                    <Button className='btn-sm' variant="light" onClick={handleCancel}>Cancel
-                                    </Button>
-                                    <Button className='btn-sm' variant="success" onClick={handleUserEdit}>Save
+                                <div className='status_edit'>
+                                    <Button className='btn-sm statusBtn' variant="light" onClick={() => {
+                                        setEditMode(true)
+                                    }}><FaUserEdit size={28} />
                                     </Button>
                                 </div>
                             </div>
-
-                    : <div className='avatarStatus'>
-                        <div className='avatar'>
-                            <img src={AvatarImages[user.userImageId]} alt=''/>
-                        </div>
-                        <div className='status'>
-                            <div className='status_info'>
-                                <div className='profile'>
-                                    <h3>{user.userName}</h3>
-                                    <div className='prof-small-text'>
-                                        <span>@{user.userLogin}</span>
-                                    </div>
-                                </div>
-                                <div className='prof-money'>
-                                    <img src="coin.png" alt=""/>
-                                    <span className='prof-small-text money-text'>{coins}</span>
-                                </div>
-                            </div>
-                            <div className='status_edit'>
-                                <Button className='btn-sm statusBtn' variant="light" onClick={() => {
-                                    setEditMode(true)
-                                }}>Edit
-                                </Button>
+                            <div className='welcomeTitle'>
+                                <h2>Welcome to To Do List!</h2>
                             </div>
                         </div>
-                    </div>
-            }
+                }
+            </div>
+            
         </div>
     )
 }

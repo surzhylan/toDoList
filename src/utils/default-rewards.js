@@ -32,5 +32,11 @@ const DefaultRewards = [
         cost: 200,
         image: '/rewardsImages/perfume.png'
     },
+    {
+        id: uuidv4(),
+        title: 'Skin care',
+        cost: 300,
+        image: '/rewardsImages/skincare.png'
+    }
 ]
 export default DefaultRewards
